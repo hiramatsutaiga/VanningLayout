@@ -14,7 +14,7 @@ VanningLayout/
 ├─ taiga/                          # taiga の配置アルゴリズムと出力結果
 ├─ adv_hard_v2cmaes/               # 敵対的積み荷データ
 ├─ README.md
-└─ 要件定義書.md
+└─ 成果物仕様.md
 ```
 
 ## 各フォルダの内容
