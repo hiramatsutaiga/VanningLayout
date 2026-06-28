@@ -1,0 +1,2009 @@
+{
+  "project_info": {
+    "team_name": "beam_ep_w2c_final",
+    "execution_time_ms": 20806
+  },
+  "containers": [
+    {
+      "container_id": 1,
+      "destination_id": "DEST_A",
+      "total_weight": 13551.74,
+      "items": [
+        {
+          "item_id": "P008",
+          "size_type": "large",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 2070
+          },
+          "position": {
+            "x": 20,
+            "y": 2005,
+            "z": 0
+          },
+          "weight": 2564.55,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P011",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 8907,
+            "z": 1630
+          },
+          "weight": 2633.52,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P025",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 7417,
+            "z": 1050
+          },
+          "weight": 234.0,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P026",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2233,
+            "l": 1932,
+            "h": 990
+          },
+          "position": {
+            "x": 0,
+            "y": 3995,
+            "z": 0
+          },
+          "weight": 846.62,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P030",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 8907,
+            "z": 730
+          },
+          "weight": 3176.71,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P035",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 7417,
+            "z": 0
+          },
+          "weight": 279.95,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P045",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 5927,
+            "z": 1050
+          },
+          "weight": 354.97,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P070",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 824.3,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P079",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 900
+          },
+          "weight": 497.75,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P090",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 8907,
+            "z": 0
+          },
+          "weight": 1467.28,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P108",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 5927,
+            "z": 0
+          },
+          "weight": 672.09,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        }
+      ]
+    },
+    {
+      "container_id": 2,
+      "destination_id": "DEST_A",
+      "total_weight": 23411.14,
+      "items": [
+        {
+          "item_id": "P012",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 3745,
+            "z": 0
+          },
+          "weight": 1421.85,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P027",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 9605,
+            "z": 550
+          },
+          "weight": 266.61,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P048",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 20,
+            "y": 2255,
+            "z": 900
+          },
+          "weight": 2009.68,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P053",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 7615,
+            "z": 0
+          },
+          "weight": 1882.42,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P063",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 5235,
+            "z": 0
+          },
+          "weight": 2120.1,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P068",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 6425,
+            "z": 0
+          },
+          "weight": 449.9,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P082",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7615,
+            "z": 1100
+          },
+          "weight": 2101.84,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P094",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 1150,
+            "y": 2255,
+            "z": 900
+          },
+          "weight": 1484.76,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P097",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 7615,
+            "z": 550
+          },
+          "weight": 1081.09,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P100",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 1130,
+            "y": 3745,
+            "z": 900
+          },
+          "weight": 2416.01,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P103",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 9605,
+            "z": 0
+          },
+          "weight": 925.53,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P105",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 1295.45,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P106",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 3745,
+            "z": 900
+          },
+          "weight": 2598.13,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P107",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 20,
+            "y": 2255,
+            "z": 0
+          },
+          "weight": 2376.64,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P114",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 9605,
+            "z": 1100
+          },
+          "weight": 981.13,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        }
+      ]
+    },
+    {
+      "container_id": 3,
+      "destination_id": "DEST_A",
+      "total_weight": 13217.32,
+      "items": [
+        {
+          "item_id": "P004",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 730
+          },
+          "weight": 358.02,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P018",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 9395,
+            "z": 0
+          },
+          "weight": 1480.42,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P036",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 9395,
+            "z": 730
+          },
+          "weight": 1215.16,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P039",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 585,
+            "y": 2255,
+            "z": 0
+          },
+          "weight": 1815.61,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P058",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7135,
+            "z": 0
+          },
+          "weight": 1657.36,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P062",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 914.84,
+          "is_rotated": true,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P072",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7135,
+            "z": 730
+          },
+          "weight": 1610.49,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P091",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 3745,
+            "z": 0
+          },
+          "weight": 341.91,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P110",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 4875,
+            "z": 0
+          },
+          "weight": 1964.25,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P111",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 4875,
+            "z": 730
+          },
+          "weight": 1859.26,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        }
+      ]
+    },
+    {
+      "container_id": 4,
+      "destination_id": "DEST_B",
+      "total_weight": 15367.1,
+      "items": [
+        {
+          "item_id": "P002",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 20,
+            "y": 5005,
+            "z": 0
+          },
+          "weight": 804.2,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P010",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 1990,
+            "z": 0
+          },
+          "weight": 925.44,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P015",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 6995,
+            "z": 0
+          },
+          "weight": 3387.69,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P020",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 980
+          },
+          "position": {
+            "x": 0,
+            "y": 6995,
+            "z": 1100
+          },
+          "weight": 672.83,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P032",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 900
+          },
+          "weight": 2677.05,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P044",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 3480,
+            "z": 0
+          },
+          "weight": 525.02,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P046",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 8485,
+            "z": 0
+          },
+          "weight": 513.39,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P050",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 20,
+            "y": 5005,
+            "z": 900
+          },
+          "weight": 267.27,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P051",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 761.76,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P059",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 9975,
+            "z": 0
+          },
+          "weight": 3007.32,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P066",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 3480,
+            "z": 1050
+          },
+          "weight": 427.38,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P071",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 8485,
+            "z": 1050
+          },
+          "weight": 711.16,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P074",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 9975,
+            "z": 900
+          },
+          "weight": 200.09,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P084",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 1990,
+            "z": 1050
+          },
+          "weight": 486.5,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        }
+      ]
+    },
+    {
+      "container_id": 5,
+      "destination_id": "DEST_B",
+      "total_weight": 20015.1,
+      "items": [
+        {
+          "item_id": "P005",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 1100
+          },
+          "position": {
+            "x": 555,
+            "y": 1870,
+            "z": 0
+          },
+          "weight": 597.76,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P009",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 0
+          },
+          "weight": 2265.18,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P013",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 550
+          },
+          "weight": 167.82,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P017",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 555,
+            "y": 1870,
+            "z": 1100
+          },
+          "weight": 1659.78,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P024",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 8650,
+            "z": 0
+          },
+          "weight": 1254.95,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P034",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 1351.51,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P043",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 730
+          },
+          "weight": 260.5,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P052",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 8650,
+            "z": 550
+          },
+          "weight": 1205.73,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P056",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 1100
+          },
+          "weight": 1758.35,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P069",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 1100
+          },
+          "weight": 2434.82,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P076",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1460
+          },
+          "weight": 1443.46,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P078",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 8650,
+            "z": 1100
+          },
+          "weight": 167.82,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P093",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 0
+          },
+          "weight": 2216.44,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P096",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 8650,
+            "z": 1650
+          },
+          "weight": 745.11,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P109",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1990,
+            "l": 2260,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 1650
+          },
+          "weight": 2485.87,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        }
+      ]
+    },
+    {
+      "container_id": 6,
+      "destination_id": "DEST_B",
+      "total_weight": 9822.17,
+      "items": [
+        {
+          "item_id": "P040",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 721.71,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P042",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1100
+          },
+          "position": {
+            "x": 1130,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 321.54,
+          "is_rotated": true,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P047",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 8623,
+            "z": 0
+          },
+          "weight": 1096.1,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P057",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 9753,
+            "z": 0
+          },
+          "weight": 2047.55,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P088",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1932,
+            "l": 2233,
+            "h": 990
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 0
+          },
+          "weight": 1124.27,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P101",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 405,
+            "y": 1870,
+            "z": 0
+          },
+          "weight": 2032.58,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P104",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 0
+          },
+          "weight": 2478.42,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        }
+      ]
+    },
+    {
+      "container_id": 7,
+      "destination_id": "DEST_C",
+      "total_weight": 22865.44,
+      "items": [
+        {
+          "item_id": "P001",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 20,
+            "y": 2005,
+            "z": 900
+          },
+          "weight": 737.46,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P019",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 20,
+            "y": 2005,
+            "z": 0
+          },
+          "weight": 357.4,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P021",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 3995,
+            "z": 0
+          },
+          "weight": 236.99,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P022",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7975,
+            "z": 1460
+          },
+          "weight": 256.56,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P031",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 5985,
+            "z": 0
+          },
+          "weight": 814.42,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P037",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 5985,
+            "z": 900
+          },
+          "weight": 850.51,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P038",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 3995,
+            "z": 1630
+          },
+          "weight": 2190.7,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P041",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 900
+          },
+          "weight": 1189.37,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P055",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7975,
+            "z": 0
+          },
+          "weight": 372.99,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P065",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 9965,
+            "z": 0
+          },
+          "weight": 788.0,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P073",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 554.52,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P075",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1450
+          },
+          "weight": 1671.36,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P080",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7975,
+            "z": 730
+          },
+          "weight": 1928.96,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P081",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 9965,
+            "z": 550
+          },
+          "weight": 1735.25,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P083",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 3995,
+            "z": 900
+          },
+          "weight": 3123.66,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P085",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 5985,
+            "z": 1450
+          },
+          "weight": 2896.37,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P092",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 9965,
+            "z": 1100
+          },
+          "weight": 1063.34,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P095",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 9965,
+            "z": 1650
+          },
+          "weight": 904.27,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P113",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1990,
+            "h": 550
+          },
+          "position": {
+            "x": 20,
+            "y": 2005,
+            "z": 1450
+          },
+          "weight": 1193.31,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        }
+      ]
+    },
+    {
+      "container_id": 8,
+      "destination_id": "DEST_C",
+      "total_weight": 18067.27,
+      "items": [
+        {
+          "item_id": "P003",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 9370,
+            "z": 900
+          },
+          "weight": 2382.03,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P006",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 10860,
+            "z": 0
+          },
+          "weight": 696.83,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P007",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1050
+          },
+          "weight": 3063.3,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P016",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 1050
+          },
+          "weight": 595.0,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P028",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 7880,
+            "z": 0
+          },
+          "weight": 296.26,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P029",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 2260,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 0
+          },
+          "weight": 819.62,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P033",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 7880,
+            "z": 1450
+          },
+          "weight": 459.6,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P054",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 900
+          },
+          "position": {
+            "x": 0,
+            "y": 9370,
+            "z": 0
+          },
+          "weight": 2882.71,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P060",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1190,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 1050
+          },
+          "weight": 854.12,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P061",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 680.48,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P064",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 2260,
+            "h": 1100
+          },
+          "position": {
+            "x": 405,
+            "y": 1870,
+            "z": 0
+          },
+          "weight": 2364.12,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P067",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 1050
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 0
+          },
+          "weight": 565.86,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P087",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 2260,
+            "l": 1490,
+            "h": 550
+          },
+          "position": {
+            "x": 0,
+            "y": 7880,
+            "z": 900
+          },
+          "weight": 906.6,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P099",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 1100
+          },
+          "position": {
+            "x": 405,
+            "y": 1870,
+            "z": 1100
+          },
+          "weight": 1500.74,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        }
+      ]
+    },
+    {
+      "container_id": 9,
+      "destination_id": "DEST_C",
+      "total_weight": 11463.71,
+      "items": [
+        {
+          "item_id": "P014",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 6390,
+            "z": 0
+          },
+          "weight": 2189.98,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P023",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "weight": 750.33,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P049",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1100
+          },
+          "position": {
+            "x": 555,
+            "y": 1870,
+            "z": 730
+          },
+          "weight": 1498.49,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P077",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1130,
+            "l": 1490,
+            "h": 1100
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 730
+          },
+          "weight": 624.73,
+          "is_rotated": true,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P086",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 555,
+            "y": 1870,
+            "z": 0
+          },
+          "weight": 1587.52,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P089",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 7520,
+            "z": 0
+          },
+          "weight": 581.97,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P098",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 8650,
+            "z": 0
+          },
+          "weight": 2594.42,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P102",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1490,
+            "l": 1130,
+            "h": 1460
+          },
+          "position": {
+            "x": 0,
+            "y": 9780,
+            "z": 0
+          },
+          "weight": 1220.99,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        },
+        {
+          "item_id": "P112",
+          "size_type": "medium",
+          "dimensions": {
+            "w": 1190,
+            "l": 2260,
+            "h": 730
+          },
+          "position": {
+            "x": 0,
+            "y": 4130,
+            "z": 0
+          },
+          "weight": 415.28,
+          "is_rotated": false,
+          "destination_id": "DEST_C"
+        }
+      ]
+    }
+  ]
+}

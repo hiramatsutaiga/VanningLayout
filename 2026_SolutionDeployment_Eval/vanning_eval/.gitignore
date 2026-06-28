@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+
+# 各自の評価入力・結果 (共有しない)
+input/*/
+!input/README.md
+!input/.gitkeep
+# test/ は tests/test_fixtures.py が参照する回帰テスト用フィクスチャなので追跡する
+!input/test/
+# official_* は canonical input (ランキングの ground truth)。全員が同一の
+# 正規入力を持つ必要があるため共有・追跡する。canonical_input.load_canonical_registry が参照。
+!input/official_*/
+output/*
+!output/.gitkeep
+
+# ルート直下に出る単発評価レポート（共有しない）
+/evaluation_report.json
+
+# ローカル環境向けスクリプト（共有しない）
+scripts/run_viewer.ps1
+
+# 各自の GitHub PAT（共有しない）
+.streamlit/secrets.toml

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>vanning-eval Web サーバー構成</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --sub: #555;
+    --accent: #e8a33d;
+    --accent-soft: #fff1d6;
+    --border: #d8d4ca;
+    --code-bg: #f0ebe0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    margin: 0;
+    padding: 32px 48px;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.7;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 28px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  h1 .url {
+    display: block;
+    font-size: 14px;
+    color: var(--sub);
+    font-weight: normal;
+    margin-top: 6px;
+    font-family: ui-monospace, Consolas, monospace;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 36px;
+    padding: 6px 12px;
+    background: var(--accent-soft);
+    border-left: 5px solid var(--accent);
+  }
+  h3 { font-size: 16px; margin-top: 20px; color: var(--sub); }
+  code, pre {
+    font-family: ui-monospace, Consolas, monospace;
+    background: var(--code-bg);
+    border-radius: 4px;
+  }
+  code { padding: 2px 6px; font-size: 0.92em; }
+  pre {
+    padding: 14px 18px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--accent-soft); }
+  .arch {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 6px;
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: pre;
+    overflow-x: auto;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: white;
+    font-size: 12px;
+    margin-right: 6px;
+  }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  .card h3 { margin-top: 0; }
+  .note {
+    background: #fff8e8;
+    border-left: 4px solid var(--accent);
+    padding: 10px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .risk {
+    background: #fdecec;
+    border-left: 4px solid #c33;
+  }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>
+  vanning-eval — Web サーバー構成
+  <span class="url">https://136.109.238.213.sslip.io/</span>
+</h1>
+<p style="color:var(--sub); margin-top: 4px;">
+  ローカル <code>launch.bat</code> 起動から、チームに URL を 1 つ配るだけで使える状態へ移行。
+  副次目的として GCP の基礎 (VM / Firewall / systemd / TLS) を実地で学ぶ。
+</p>
+
+<h2>1. 構成図</h2>
+<div class="arch">[ チームメンバーのブラウザ ]
+            │  HTTPS (443)
+            ▼
+  136.109.238.213.sslip.io   ← sslip.io: IP を返すだけの無料 DNS
+            │
+            ▼
+  ┌───────────────────────────────────┐
+  │  GCP VM  "vanning-eval"           │
+  │  e2-micro / us-west1-a / Debian 12│
+  │  (Always Free 枠)                 │
+  │                                   │
+  │   [ Caddy :443 ]                  │
+  │     ├ Let's Encrypt 自動更新      │
+  │     └ reverse_proxy ──▶ :8502     │
+  │                          │        │
+  │                          ▼        │
+  │   [ Streamlit :8502 ]             │
+  │     systemd unit で常駐           │
+  │     bind = 127.0.0.1              │
+  │                          │        │
+  │                          ▼        │
+  │   secrets.toml (PAT, chmod 600)   │
+  └──────────────────┼────────────────┘
+                     │
+                     ▼
+        [ GitHub Contents API ]
+        (リーダーボード読み書き)</div>
+
+<h2>2. スタック早見表</h2>
+<table>
+  <tr><th>レイヤ</th><th>採用</th><th>理由</th></tr>
+  <tr><td>クラウド</td><td>GCP</td><td>e2-micro が永久無料 (Always Free)。AWS より枠が太い</td></tr>
+  <tr><td>実行形態</td><td>VM (e2-micro)</td><td>Cloud Run より学習効率優先。systemd / Linux 直触り</td></tr>
+  <tr><td>OS</td><td>Debian 12</td><td>GCP 既定、systemd・apt が素直</td></tr>
+  <tr><td>リバプロ / TLS</td><td>Caddy</td><td>1 ホスト = 数行で reverse_proxy + 自動 Let's Encrypt + WebSocket。nginx + certbot より圧倒的に薄い</td></tr>
+  <tr><td>DNS</td><td>sslip.io</td><td><code>&lt;IP&gt;.sslip.io</code> がその IP を返す無料ワイルドカード。ドメイン購入不要で Let's Encrypt の HTTP-01 検証を通せる</td></tr>
+  <tr><td>常駐</td><td>systemd unit</td><td><code>Restart=on-failure</code>。<code>nohup</code> だと VM 再起動でアプリ消える</td></tr>
+  <tr><td>アプリ</td><td>Streamlit</td><td>既存 <code>launch.bat</code> の中身そのまま。bind を <code>127.0.0.1</code> に絞り Caddy 越しのみ公開</td></tr>
+  <tr><td>永続化</td><td>GitHub Contents API</td><td>DB を持たない。リーダーボードは PAT 経由でリポジトリにコミット</td></tr>
+</table>
+
+<h2>3. トラフィックの流れ (1 リクエスト)</h2>
+<ol>
+  <li>ブラウザが <code>https://136.109.238.213.sslip.io/</code> を解決 → IP がそのまま返る</li>
+  <li>VM の <strong>Caddy:443</strong> が TLS 終端 (Let's Encrypt の証明書を自動発行・更新)</li>
+  <li>Caddy が <code>reverse_proxy localhost:8502</code> で内部に流す</li>
+  <li><strong>Streamlit</strong> がレンダリング、必要なら GitHub Contents API で leaderboard を読み書き</li>
+  <li>Caddy 経由でレスポンス、WebSocket もデフォルトで upgrade される</li>
+</ol>
+
+<h2>4. セキュリティの絞り方</h2>
+<ul>
+  <li><span class="badge">FW</span> ファイアウォール: <code>80/443</code> のみ開放。<code>8502</code> 直叩きは <strong>閉鎖済み</strong> (timeout になる)</li>
+  <li><span class="badge">Bind</span> Streamlit は <code>127.0.0.1:8502</code> にバインド。外部 NIC からは見えない</li>
+  <li><span class="badge">TLS</span> HTTP は Caddy 側で 443 へ自動 redirect</li>
+  <li><span class="badge">Secret</span> GitHub PAT は <code>secrets.toml</code> (chmod 600) に置く。SSH 鍵で VM ログインを守る前提</li>
+</ul>
+
+<h2>5. 重要な設計判断</h2>
+<div class="grid">
+  <div class="card">
+    <h3>HTTPS を Phase 1 に前倒し</h3>
+    <p>当初は HTTP-only MVP で出す計画だったが、Chrome 117+ の HTTPS auto-upgrade で IP 直アクセスが白画面化することが判明。<strong>HTTP-only 公開は最初から成立しない</strong>と分かり、HTTPS を最初から組み込んだ。</p>
+  </div>
+  <div class="card">
+    <h3>nginx + certbot ではなく Caddy</h3>
+    <p>Caddyfile 1 ホスト = 数行で証明書取得・更新・WebSocket upgrade まで自動。学習目的でも「Web サーバーの本質」を 1 ファイルで読める方が理解が深い。</p>
+  </div>
+  <div class="card">
+    <h3>ドメインを買わずに sslip.io</h3>
+    <p>Let's Encrypt は HTTP-01 検証で <strong>FQDN を要求</strong>するため、生 IP だけでは TLS を張れない。<code>&lt;IP&gt;.sslip.io</code> が IP を返してくれるおかげでドメイン購入 0 円で TLS 化。</p>
+  </div>
+  <div class="card">
+    <h3>nohup → systemd</h3>
+    <p>当初 <code>nohup python ...</code> で起動 → VM 再起動でアプリ消失。<code>vanning-eval.service</code> で常駐化、<code>journalctl -u vanning-eval</code> でログ統一。</p>
+  </div>
+</div>
+
+<h2>6. 運用 (再アクセス時のコマンド)</h2>
+<pre>
+# サーバー状態 (IP は動的なので毎回確認)
+gcloud compute instances describe vanning-eval --zone=us-west1-a \
+  --format="value(status,networkInterfaces[0].accessConfigs[0].natIP)"
+
+# Streamlit のログ
+gcloud compute ssh vanning-eval --zone=us-west1-a \
+  --command="sudo journalctl -u vanning-eval -f"
+
+# Caddy のログ (証明書更新確認など)
+gcloud compute ssh vanning-eval --zone=us-west1-a \
+  --command="sudo journalctl -u caddy --no-pager -n 30"
+
+# 死活
+curl -sS https://136.109.238.213.sslip.io/_stcore/health
+</pre>
+
+<h2>7. 既知のリスクと未完タスク</h2>
+<div class="note risk">
+  <strong>突かれやすい弱点</strong>
+  <ul>
+    <li><strong>動的外部 IP</strong>: VM 停止 → 起動で IP が変わると sslip.io URL も変わる。$1.46/月で static IP 予約可</li>
+    <li><strong>認証なし</strong>: URL を踏める誰でもリーダーボードに書ける (PAT 経由)。教員配布前提なら IP 制限 or Basic 認証が筋</li>
+    <li><strong>PAT 平文</strong>: <code>secrets.toml</code> にベタ書き。Secret Manager 移行は Phase 4 で予定</li>
+    <li><strong>Tailscale 干渉</strong>: <code>136.x.x.x</code> 帯は CGNAT と近く、Tailscale ON のブラウザでトラフィックが奪われる事例あり</li>
+  </ul>
+</div>
+<div class="note">
+  <strong>残タスク (proj-vanning-eval-gcp より)</strong>
+  <ul>
+    <li>secrets.toml → Secret Manager 移行 (任意、学習目的)</li>
+    <li>PAT 期限を 30〜60 日に短縮 + ローテーション運用</li>
+    <li>チームへ URL 共有 + 動作確認依頼</li>
+  </ul>
+</div>
+
+<h2>8. 学んだこと (発表で言える話)</h2>
+<ul>
+  <li>「ローカル <code>launch.bat</code> → URL 1 本配布」の移行は、<strong>VM + リバプロ + systemd + TLS</strong> の 4 点セットで成立する</li>
+  <li>HTTPS は後付けではなく <strong>最初から</strong>。Chrome の auto-upgrade を読み違えると MVP が白画面で全滅する</li>
+  <li>Caddy / sslip.io の組み合わせで <strong>ドメイン 0 円・設定 5 行で TLS</strong> まで届く。学習用構成として再利用しやすい</li>
+  <li>e2-micro の Always Free は本気で運用に耐える (16〜32 並行ユーザー程度の社内利用なら十分)</li>
+</ul>
+
+<hr style="margin-top: 40px; border: none; border-top: 1px solid var(--border);">
+<p style="font-size: 12px; color: var(--sub); text-align: center;">
+  SSOT: <code>03-projects/proj-vanning-eval-gcp.md</code> /
+  Caddyfile: <code>/etc/caddy/Caddyfile</code> /
+  unit: <code>/etc/systemd/system/vanning-eval.service</code>
+</p>
+
+</body>
+</html>

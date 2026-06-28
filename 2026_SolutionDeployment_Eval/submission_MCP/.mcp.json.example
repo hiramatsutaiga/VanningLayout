@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "vanning-eval": {
+      "command": "python",
+      "args": ["-m", "vanning_eval_mcp"],
+      "env": {
+        "VANNING_GITHUB_TOKEN": "github_pat_REPLACE_ME",
+        "VANNING_GITHUB_OWNER": "ornamentsclimate",
+        "VANNING_GITHUB_REPO": "2026_SolutionDeployment_Eval",
+        "VANNING_SCOREBOARD_PATH": "scoreboard/history.json",
+        "VANNING_SCOREBOARD_BRANCH": "main",
+        "VANNING_REPO_ROOT": "REPLACE_ME_absolute_path_to_vanning-eval",
+        "VANNING_INPUT_ROOT": "REPLACE_ME_absolute_path_to_vanning-eval/vanning_eval_rui/input",
+        "VANNING_DEFAULT_AUTHOR": "REPLACE_ME_your_name_on_leaderboard"
+      }
+    }
+  }
+}

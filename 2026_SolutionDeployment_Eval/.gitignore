@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+
+# secrets — 個別の PAT は絶対 commit しない
+**/.streamlit/secrets.toml
+.mcp.json
+
+# MCP 実行時 artifacts
+submission_MCP/mcp_server.log
+submission_MCP/.venv/
+submission_MCP/*.egg-info/
+submission_MCP/dist/
+submission_MCP/build/

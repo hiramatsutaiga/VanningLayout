@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vanning-eval-mcp"
+version = "0.1.0"
+description = "MCP server for batch-submitting vanning-eval leaderboard entries"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp",
+    "requests>=2.31",
+    # vanning-eval 本体パッケージ（vanning_viewer.scoreboard_client /
+    # vanning_eval.canonical_input に依存）。同 repo の vanning_eval_rui を
+    # subdirectory で参照。ローカル dev 時は editable install で上書きしてよい。
+    "vanning-eval @ git+https://github.com/ornamentsclimate/2026_SolutionDeployment_Eval.git#subdirectory=vanning_eval_rui",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+vanning-eval-mcp = "vanning_eval_mcp.server:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

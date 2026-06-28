@@ -1,0 +1,605 @@
+/* =========================================================================
+   Streamlit クローム用スキン
+   tokens.css に定義した CSS カスタムプロパティを使って、Streamlit 標準の
+   DOM を Marathon 風コックピットに寄せる。
+   tokens.css を先に読ませること（streamlit_app.py で順序担保）。
+   ========================================================================= */
+
+/* ---------- アプリ全体 ---------- */
+html, body, [data-testid="stAppViewContainer"] {
+  background: var(--bg) !important;
+  color: var(--fg-1) !important;
+  font-family: var(--font-body) !important;
+}
+
+[data-testid="stAppViewContainer"] {
+  background-image: var(--pattern-grid);
+}
+
+/* Streamlit の装飾バー・ヘッダーを非表示（独自ネームプレートを使う） */
+[data-testid="stHeader"] {
+  background: transparent;
+}
+[data-testid="stDecoration"] { display: none; }
+#MainMenu, footer { visibility: hidden; }
+
+/* メインブロック横幅を広めに */
+[data-testid="stMainBlockContainer"] {
+  max-width: 1600px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* ---------- サイドバー ---------- */
+[data-testid="stSidebar"] {
+  background: var(--bg-2) !important;
+  border-right: 1px solid var(--border);
+}
+[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
+  padding-top: 1.5rem;
+}
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  font-family: var(--font-display);
+  font-size: 14px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-1);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+/* ---------- 見出し ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display) !important;
+  color: var(--fg-0) !important;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: 28px !important; }
+h2 { font-size: 20px !important; }
+h3 { font-size: 16px !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-1) !important; }
+
+/* Streamlit のキャプション */
+[data-testid="stCaptionContainer"],
+.stCaption {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  color: var(--fg-2) !important;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- タブ ---------- */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 0;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 8px;
+}
+.stTabs [data-baseweb="tab"] {
+  height: 44px;
+  padding: 0 20px !important;
+  font-family: var(--font-display) !important;
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  color: var(--fg-2) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-right: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  transition: color 120ms, background 120ms;
+}
+.stTabs [data-baseweb="tab"]:first-child {
+  border-left: 1px solid var(--border) !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+  color: var(--fg-1) !important;
+  background: var(--surface-1) !important;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  color: var(--accent-inverse) !important;
+  background: var(--accent) !important;
+  font-weight: 700;
+}
+/* Streamlit のタブラベルは内部 <p> を持つため、子孫まで暗色を強制 */
+.stTabs [data-baseweb="tab"][aria-selected="true"] *,
+.stTabs [data-baseweb="tab"][aria-selected="true"] p,
+.stTabs [data-baseweb="tab"][aria-selected="true"] [data-testid="stMarkdownContainer"] {
+  color: var(--accent-inverse) !important;
+}
+.stTabs [data-baseweb="tab-highlight"] {
+  background: var(--accent) !important;
+  height: 2px !important;
+}
+.stTabs [data-baseweb="tab-border"] {
+  background: var(--border) !important;
+}
+
+/* ---------- ボタン ---------- */
+.stButton > button,
+button[data-testid="stBaseButton-primary"],
+button[data-testid="stBaseButton-secondary"] {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 10px 18px !important;
+  border-radius: 2px !important;
+  border: 1px solid var(--border-strong) !important;
+  background: transparent !important;
+  color: var(--fg-1) !important;
+  transition: border-color 120ms, color 120ms, background 120ms;
+  box-shadow: none !important;
+}
+.stButton > button:hover,
+button[data-testid="stBaseButton-secondary"]:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* primary ボタンは Hazard fill */
+button[data-testid="stBaseButton-primary"] {
+  background: var(--accent) !important;
+  color: var(--accent-inverse) !important;
+  border-color: var(--accent) !important;
+}
+button[data-testid="stBaseButton-primary"]:hover {
+  background: var(--accent-ink) !important;
+  border-color: var(--accent-ink) !important;
+  color: var(--accent-inverse) !important;
+}
+/* ボタンラベルも内部 <p>/<div> を持つので子孫まで暗色を強制 */
+button[data-testid="stBaseButton-primary"] *,
+button[data-testid="stBaseButton-primary"] p,
+button[data-testid="stBaseButton-primary"] [data-testid="stMarkdownContainer"] {
+  color: var(--accent-inverse) !important;
+}
+button[data-testid="stBaseButton-primary"]:disabled,
+button[data-testid="stBaseButton-primary"][disabled] {
+  background: var(--surface-2) !important;
+  color: var(--fg-3) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---------- 入力系 ---------- */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-testid="stSelectbox"] > div[data-baseweb="select"] > div,
+.stTextArea textarea {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  color: var(--fg-0) !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  box-shadow: var(--inset-input) !important;
+}
+
+/* Selectbox popover (ドロップダウン)。BaseWeb は portal に
+   transform: translate3d(...) 付きで配置するため Chrome は合成レイヤーを生成し、
+   その上では ClearType (subpixel AA) が無効になりグレースケール AA に落ちる。
+   ページ本体は ClearType でシャープなので popover だけ「ぼやけて」見える。
+   合成レイヤー上で破綻しにくいよう、popover 配下は明示的に antialiased を指定し、
+   フォントサイズ/ウェイトも少し上げて視認性を確保する。 */
+[data-baseweb="popover"],
+[data-baseweb="popover"] *,
+[data-baseweb="popover"] input {
+  /* IBM Plex Sans JP は合成レイヤー (transform: translate3d) 上でグレースケール
+     AA に落ちると小サイズ日本語がぼやける。Windows 標準の Yu Gothic UI / Meiryo UI
+     はヒンティングが効くので合成レイヤー上でもシャープに出る。popover 配下だけ
+     システム日本語フォントに差し替える。 */
+  font-family: "Yu Gothic UI", "Meiryo UI", "Segoe UI", system-ui, sans-serif !important;
+}
+[data-baseweb="popover"] [data-baseweb="menu"] {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.6) !important;
+}
+[data-baseweb="menu"] [role="option"] {
+  font-size: 13px !important;
+  color: var(--fg-1) !important;
+  padding: 8px 12px !important;
+}
+[data-baseweb="menu"] [role="option"][aria-selected="true"],
+[data-baseweb="menu"] [role="option"]:hover {
+  background: var(--surface-3) !important;
+  color: var(--fg-0) !important;
+}
+[data-baseweb="popover"] input {
+  font-size: 13px !important;
+  color: var(--fg-0) !important;
+}
+
+/* stSelectboxVirtualDropdown は内側スクロールコンテナに `will-change: transform`
+   を持ち、しかも各 <li> が height/top: 32.5px (小数ピクセル) で配置される。
+   この組み合わせで GPU レイヤー化＋小数ピクセル描画 → ClearType が無効になり
+   日本語テキストがぼやける。will-change を打ち消し + アイテム高を整数に揃える。 */
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+  will-change: auto !important;
+  transform: none !important;
+}
+[data-testid="stSelectboxVirtualDropdown"] li[role="option"] {
+  height: 33px !important;
+}
+[data-testid="stTextInput"] input:focus,
+[data-testid="stNumberInput"] input:focus,
+.stTextArea textarea:focus {
+  border-color: var(--accent) !important;
+  outline: none !important;
+}
+
+/* Slider — アクセント色に */
+[data-testid="stSlider"] [role="slider"] {
+  background: var(--accent) !important;
+  border-color: var(--accent-ink) !important;
+}
+[data-testid="stSlider"] [data-baseweb="slider"] div[role="progressbar"] {
+  background: var(--accent) !important;
+}
+
+/* ラジオ / チェックボックス */
+.stRadio label,
+.stCheckbox label {
+  font-family: var(--font-body) !important;
+  font-size: 13px;
+  color: var(--fg-1);
+}
+
+/* ---------- ファイルアップローダー ---------- */
+[data-testid="stFileUploader"] section,
+[data-testid="stFileUploaderDropzone"] {
+  background: var(--surface-1) !important;
+  border: 1px dashed var(--border-strong) !important;
+  border-radius: 2px !important;
+  color: var(--fg-2) !important;
+}
+[data-testid="stFileUploader"] section:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* ---------- Divider ---------- */
+hr, [data-testid="stDivider"] {
+  border: 0 !important;
+  border-top: 1px solid var(--border) !important;
+  margin: 24px 0 !important;
+}
+
+/* ---------- Alert / Info / Warning / Success ---------- */
+[data-testid="stAlert"] {
+  border-radius: 2px !important;
+  border: 1px solid var(--border) !important;
+  font-family: var(--font-body);
+}
+[data-testid="stAlertContentInfo"] {
+  background: rgb(76 120 168 / 0.10) !important;
+  border-color: rgba(76, 120, 168, 0.4) !important;
+}
+[data-testid="stAlertContentSuccess"] {
+  background: var(--pass-tint-12) !important;
+  border-color: rgba(62, 224, 138, 0.4) !important;
+  color: var(--pass) !important;
+}
+[data-testid="stAlertContentWarning"] {
+  background: rgb(255 167 38 / 0.10) !important;
+  border-color: rgba(255, 167, 38, 0.4) !important;
+  color: var(--warn) !important;
+}
+[data-testid="stAlertContentError"] {
+  background: var(--fail-tint-12) !important;
+  border-color: rgba(255, 30, 100, 0.4) !important;
+  color: var(--fail) !important;
+}
+
+/* ---------- Dataframe ---------- */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+}
+[data-testid="stDataFrame"] thead th {
+  background: var(--bg-2) !important;
+  color: var(--fg-2) !important;
+  font-family: var(--font-display) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+[data-testid="stDataFrame"] tbody td {
+  font-family: var(--font-mono) !important;
+  font-size: 12px !important;
+  color: var(--fg-1) !important;
+}
+
+/* ---------- JSON viewer ---------- */
+[data-testid="stJson"] {
+  background: var(--surface-1) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  font-family: var(--font-mono) !important;
+}
+
+/* ---------- Expander ---------- */
+[data-testid="stExpander"] {
+  border: 1px solid var(--border) !important;
+  border-radius: 2px !important;
+  background: var(--surface-1);
+}
+[data-testid="stExpander"] details summary {
+  font-family: var(--font-display) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.08em;
+  color: var(--fg-1) !important;
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   カスタムコンポーネント — streamlit_app.py が st.markdown で注入する HTML
+   ========================================================================= */
+
+/* ---------- ネームプレート ---------- */
+.vn-nameplate {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 4px 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.vn-nameplate__mark {
+  width: 24px; height: 24px;
+  background: var(--accent);
+  flex-shrink: 0;
+  position: relative;
+}
+.vn-nameplate__mark::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 2px solid var(--accent-inverse);
+  border-right: 0;
+  border-bottom: 0;
+}
+.vn-nameplate__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: var(--fg-0);
+  line-height: 1;
+  white-space: nowrap;
+}
+.vn-nameplate__sep {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 1;
+}
+.vn-nameplate__sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--fg-2);
+}
+.vn-nameplate__sub b {
+  color: var(--fg-1);
+  font-weight: 500;
+}
+
+/* ---------- HUD メトリクスタイル ---------- */
+.vn-hud-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.vn-hud {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  padding: 14px 16px 12px;
+  position: relative;
+  box-shadow: var(--bevel);
+}
+.vn-hud::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 4px;
+  background: var(--accent);
+}
+.vn-hud--pass::before { background: var(--pass); }
+.vn-hud--fail::before { background: var(--fail); }
+.vn-hud__label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-bottom: 8px;
+}
+.vn-hud__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--fg-0);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+.vn-hud__value .unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--fg-2);
+  margin-left: 4px;
+  letter-spacing: 0;
+}
+.vn-hud__value.is-pass { color: var(--pass); }
+.vn-hud__value.is-fail { color: var(--fail); }
+.vn-hud__sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- 判定プレート（HUD の verdict 版） ---------- */
+.vn-verdict {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  box-shadow: var(--bevel);
+  min-height: 78px;
+}
+.vn-verdict__bar {
+  width: 6px;
+  background: var(--pass);
+  flex-shrink: 0;
+}
+.vn-verdict__body {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vn-verdict__label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-bottom: 4px;
+}
+.vn-verdict__value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--pass);
+}
+.vn-verdict--fail .vn-verdict__bar { background: var(--fail); }
+.vn-verdict--fail .vn-verdict__value { color: var(--fail); }
+
+/* ---------- 違反グループ（vgroup） ---------- */
+.vn-vgroup {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+.vn-vgroup__hd {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
+}
+.vn-vgroup__icon {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  background: var(--fail-tint-12);
+  color: var(--fail);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid rgba(255, 30, 100, 0.3);
+  font-variant-numeric: tabular-nums;
+}
+.vn-vgroup__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--fg-0);
+}
+.vn-vgroup__title small {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--fg-3);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+.vn-vgroup__count {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--fail);
+  font-variant-numeric: tabular-nums;
+}
+.vn-vgroup__body {
+  padding: 0;
+}
+.vn-vtable {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.vn-vtable thead th {
+  text-align: left;
+  padding: 8px 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-1);
+}
+.vn-vtable tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-1);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.vn-vtable tbody tr:last-child td { border-bottom: 0; }
+.vn-vtable tbody tr:hover td { background: var(--accent-tint-12); }
+.vn-vtable .code {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 11px;
+}
+.vn-vtable .detail {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-2);
+}
+
+/* ---------- 空状態（違反なし） ---------- */
+.vn-empty {
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border: 1px dashed var(--border-strong);
+  background: var(--surface-1);
+}
+.vn-empty__ico {
+  display: inline-block;
+  width: 44px; height: 44px;
+  border: 2px solid var(--pass);
+  color: var(--pass);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.vn-empty__msg {
+  color: var(--pass);
+  font-weight: 500;
+}

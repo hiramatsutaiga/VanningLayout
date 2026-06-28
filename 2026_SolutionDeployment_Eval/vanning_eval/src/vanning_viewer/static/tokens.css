@@ -1,0 +1,279 @@
+/* =========================================================================
+   VANNING EVALUATOR — design tokens
+   Industrial-futurist HUD. Flat gunmetal neutrals + one acid-yellow accent
+   + fixed violation red. Destination palette is preserved 1:1 from the
+   codebase (src/vanning_viewer/colors.py) so the 3D view and chrome agree.
+   ========================================================================= */
+
+/* -------------------- FONTS (Google Fonts — substitution flagged) -------- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans+JP:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ---------- Neutrals (industrial hull) ---------- */
+  --bg:            #0E1014;   /* outer void / page */
+  --bg-2:          #121418;   /* app chrome */
+  --surface-1:     #1A1D23;   /* panel face */
+  --surface-2:     #22262E;   /* inner card / input */
+  --surface-3:     #2C3039;   /* hover / selected bg */
+  --border:        #2E333C;   /* hairline divider */
+  --border-strong: #3D434E;   /* stronger divider */
+  --border-bright: #555B68;   /* input focus ring */
+
+  /* ---------- Foreground ink ---------- */
+  --fg-0:          #F5F7FA;   /* display / titles */
+  --fg-1:          #D6DAE1;   /* body */
+  --fg-2:          #8A919E;   /* secondary / captions */
+  --fg-3:          #5C6470;   /* tertiary / disabled */
+  --fg-inverse:    #0E1014;   /* text on hazard fill */
+
+  /* ---------- Hazard accent (THE brand color) ---------- */
+  --hazard:        #F5FF00;   /* acid yellow — primary accent */
+  --hazard-ink:    #D4E000;   /* pressed / darker hazard */
+  --hazard-tint-12: rgb(245 255 0 / 0.12);
+  --hazard-tint-20: rgb(245 255 0 / 0.20);
+  --hazard-tint-40: rgb(245 255 0 / 0.40);
+
+  /* ---------- Cockpit palette (Marathon/Y2K direction) ----------
+     Acid green + hot pink + cobalt blue. Named colors (fixed) —
+     the live brand color is `--accent` below. */
+  --acid:          #B4FF00;   /* acid green */
+  --acid-ink:      #92D400;
+  --acid-inverse:  #0A1400;
+  --acid-tint-12:  rgb(180 255 0 / 0.12);
+  --acid-tint-20:  rgb(180 255 0 / 0.20);
+
+  --pink:          #FF0099;   /* Marathon hot magenta — selection / playhead / active */
+  --pink-ink:      #CC0077;
+  --pink-tint-12:  rgb(255 0 153 / 0.12);
+
+  --cobalt:        #1E5FFF;   /* deep electric blue — info / links */
+  --cobalt-ink:    #1644BF;
+  --cobalt-tint-12: rgb(30 95 255 / 0.12);
+
+  --ink:           #050608;   /* absolute black background */
+  --ink-2:         #0A0C10;
+  --ink-3:         #12141A;
+
+  /* ---------- THE BRAND ACCENT (theme-swappable) ----------
+     Default = Hazard Yellow. Add `.theme-green` on <body>
+     (or any ancestor) to switch to Acid Green. All UI chrome
+     reads `--accent` / `--accent-ink` / `--accent-inverse` /
+     `--accent-tint-12` — never `--hazard` or `--acid` directly. */
+  --accent:         var(--hazard);
+  --accent-ink:     var(--hazard-ink);
+  --accent-inverse: var(--fg-inverse);
+  --accent-tint-12: var(--hazard-tint-12);
+  --accent-tint-20: var(--hazard-tint-20);
+  --accent-rgb:     245, 255, 0;   /* for custom rgba() alpha */
+}
+
+.theme-green {
+  --accent:         var(--acid);
+  --accent-ink:     var(--acid-ink);
+  --accent-inverse: var(--acid-inverse);
+  --accent-tint-12: var(--acid-tint-12);
+  --accent-tint-20: var(--acid-tint-20);
+  --accent-rgb:     180, 255, 0;
+}
+
+:root {
+
+  /* ---------- Status ---------- */
+  --pass:          #3EE08A;   /* 合格 */
+  --pass-ink:      #0F2418;
+  --pass-tint-12:  rgb(62 224 138 / 0.12);
+
+  /* 失格 — rose-red between iOS red and Marathon magenta.
+     Codebase VIOLATION_COLOR (#FF3B30) is overridden for contrast on dark. */
+  --fail:          #FF1E64;
+  --fail-ink:      #2A0614;
+  --fail-tint-12:  rgb(255 30 100 / 0.12);
+  --fail-tint-20:  rgb(255 30 100 / 0.20);
+  --fail-tint-35:  rgb(255 30 100 / 0.35);
+
+  --warn:          #FFA726;   /* soft warning, non-blocking */
+  --info:          #4C78A8;   /* matches DEST_PALETTE[0] */
+
+  /* ---------- Destination palette (lifted from colors.py) ----------
+     Preserved 1:1 so the 3D mesh colors and the UI chips agree. */
+  --dest-1: #4C78A8;  /* blue */
+  --dest-2: #F58518;  /* orange */
+  --dest-3: #54A24B;  /* green */
+  --dest-4: #72B7B2;  /* teal */
+  --dest-5: #EECA3B;  /* yellow */
+  --dest-6: #B279A2;  /* purple */
+  --dest-7: #9D755D;  /* brown */
+  --dest-8: #FF9DA6;  /* pink */
+
+  /* ---------- Typography ---------- */
+  --font-display: 'Space Grotesk', 'IBM Plex Sans JP', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans JP', 'Space Grotesk', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---------- Type scale ---------- */
+  --fs-caption:  11px;   /* stencil captions, table labels */
+  --fs-micro:    12px;
+  --fs-body:     13px;   /* dense UI body */
+  --fs-ui:       15px;   /* buttons, inputs */
+  --fs-lead:     17px;
+  --fs-h4:       20px;
+  --fs-h3:       28px;
+  --fs-h2:       40px;
+  --fs-h1:       64px;
+
+  --lh-tight:    1.15;
+  --lh-normal:   1.45;
+  --lh-loose:    1.6;
+
+  --track-stencil: 0.08em;   /* UPPERCASE stencil labels */
+  --track-display: -0.01em;
+  --track-body:    0;
+
+  /* ---------- Spacing (8px grid) ---------- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+
+  /* ---------- Radii (flat HUD — almost never rounded) ---------- */
+  --radius-0:   0px;
+  --radius-1:   2px;
+  --radius-2:   4px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation (bevel system, not drop-shadow) ---------- */
+  --bevel:        inset 0 1px 0 rgb(255 255 255 / 0.04), 0 1px 0 rgb(0 0 0 / 0.6);
+  --bevel-strong: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 2px 0 rgb(0 0 0 / 0.8);
+  --inset-input:  inset 0 1px 0 rgb(0 0 0 / 0.5), inset 0 0 0 1px var(--border);
+  --focus-ring:   0 0 0 2px var(--bg), 0 0 0 3px var(--hazard);
+
+  /* ---------- Patterns ---------- */
+  --pattern-grid:
+    linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px) 0 0 / 32px 32px;
+  --pattern-hazard:
+    repeating-linear-gradient(45deg,
+      var(--hazard) 0 12px,
+      var(--bg) 12px 24px);
+  --pattern-hazard-dim:
+    repeating-linear-gradient(45deg,
+      rgb(245 255 0 / 0.25) 0 10px,
+      rgb(0 0 0 / 0.0) 10px 20px);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(.2, 0, 0, 1);
+  --dur-hover: 150ms;
+  --dur-press: 50ms;
+}
+
+/* =========================================================================
+   BASE RESET + DEFAULT ELEMENT STYLES
+   ========================================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  /* NOTE: Windows Chrome は ClearType (subpixel AA) がデフォルトでシャープ。
+     -webkit-font-smoothing: antialiased は Mac 前提のグレースケール AA 指定で
+     Windows ではむしろテキストがぼやけるため、ブラウザデフォルトに任せる。 */
+}
+
+/* ---------- Headings (stencil display) ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--fg-0);
+  margin: 0;
+  letter-spacing: var(--track-display);
+  line-height: var(--lh-tight);
+  font-weight: 600;
+}
+h1 { font-size: var(--fs-h1); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+
+/* Stencil eyebrow / overline */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--track-stencil);
+  color: var(--fg-2);
+  font-weight: 600;
+}
+
+/* ---------- Body ---------- */
+p { margin: 0 0 var(--sp-3); color: var(--fg-1); }
+small { font-size: var(--fs-micro); color: var(--fg-2); }
+
+/* ---------- Mono / code ---------- */
+code, kbd, pre, .mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "liga" 0, "calt" 0;
+  font-size: 0.92em;
+}
+code {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: var(--radius-1);
+  color: var(--hazard);
+}
+
+/* ---------- Hairline ---------- */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--sp-5) 0;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--hazard);
+  color: var(--fg-inverse);
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* =========================================================================
+   SEMANTIC UTILITY CLASSES (match README vocabulary)
+   ========================================================================= */
+.surface    { background: var(--surface-1); border: 1px solid var(--border); box-shadow: var(--bevel); border-radius: var(--radius-1); }
+.surface-2  { background: var(--surface-2); border: 1px solid var(--border); }
+.panel-grid { background-image: var(--pattern-grid); }
+
+.hazard-stripes      { background-image: var(--pattern-hazard); }
+.hazard-stripes-dim  { background-image: var(--pattern-hazard-dim); }
+
+.txt-display { font-family: var(--font-display); }
+.txt-mono    { font-family: var(--font-mono); }
+.txt-fg-2    { color: var(--fg-2); }
+.txt-fg-3    { color: var(--fg-3); }
+.txt-hazard  { color: var(--hazard); }
+.txt-fail    { color: var(--fail); }
+.txt-pass    { color: var(--pass); }
+
+.chevron-tr {
+  position: relative;
+}
+.chevron-tr::before, .chevron-tr::after {
+  content: "";
+  position: absolute;
+  background: var(--hazard);
+}
+.chevron-tr::before { top: 6px; right: 6px; width: 14px; height: 2px; }
+.chevron-tr::after  { top: 6px; right: 6px; width: 2px;  height: 14px; }

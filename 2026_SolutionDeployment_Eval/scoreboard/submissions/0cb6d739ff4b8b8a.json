@@ -1,0 +1,58 @@
+{
+  "dataset_info": {
+    "dataset_name": "test-full-violations",
+    "seed": 0,
+    "item_count": 7
+  },
+  "items": [
+    {
+      "item_id": "P001",
+      "size_type": "large",
+      "dimensions": { "w": 2000, "l": 5000, "h": 2000 },
+      "weight": 15000,
+      "destination_id": "DEST_A"
+    },
+    {
+      "item_id": "P002",
+      "size_type": "large",
+      "dimensions": { "w": 2000, "l": 5000, "h": 2000 },
+      "weight": 15000,
+      "destination_id": "DEST_A"
+    },
+    {
+      "item_id": "P003",
+      "size_type": "small",
+      "dimensions": { "w": 500, "l": 500, "h": 500 },
+      "weight": 300,
+      "destination_id": "DEST_A"
+    },
+    {
+      "item_id": "P004",
+      "size_type": "small",
+      "dimensions": { "w": 500, "l": 500, "h": 500 },
+      "weight": 200,
+      "destination_id": "DEST_A"
+    },
+    {
+      "item_id": "P005",
+      "size_type": "small",
+      "dimensions": { "w": 500, "l": 500, "h": 500 },
+      "weight": 200,
+      "destination_id": "DEST_A"
+    },
+    {
+      "item_id": "P007",
+      "size_type": "small",
+      "dimensions": { "w": 500, "l": 500, "h": 500 },
+      "weight": 100,
+      "destination_id": "DEST_B"
+    },
+    {
+      "item_id": "P008",
+      "size_type": "small",
+      "dimensions": { "w": 500, "l": 500, "h": 500 },
+      "weight": 100,
+      "destination_id": "DEST_B"
+    }
+  ]
+}

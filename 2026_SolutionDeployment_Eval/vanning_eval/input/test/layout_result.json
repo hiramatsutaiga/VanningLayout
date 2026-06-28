@@ -1,0 +1,95 @@
+{
+  "project_info": {
+    "team_name": "test-full-violations",
+    "execution_time_ms": 0,
+    "input_file": "test/items_input.json"
+  },
+  "containers": [
+    {
+      "container_id": 1,
+      "destination_id": "DEST_A",
+      "total_weight": 1234,
+      "items": [
+        {
+          "item_id": "P001",
+          "size_type": "large",
+          "dimensions": { "w": 2000, "l": 5000, "h": 2000 },
+          "position":   { "x": 0,    "y": 0,    "z": 0 },
+          "weight": 15000,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P002",
+          "size_type": "large",
+          "dimensions": { "w": 2000, "l": 5000, "h": 2000 },
+          "position":   { "x": 0,    "y": 5000, "z": 0 },
+          "weight": 15000,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P003",
+          "size_type": "small",
+          "dimensions": { "w": 500,  "l": 500,  "h": 500 },
+          "position":   { "x": 0,    "y": 10500, "z": 500 },
+          "weight": 300,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P004",
+          "size_type": "small",
+          "dimensions": { "w": 500,  "l": 500,  "h": 500 },
+          "position":   { "x": 1000, "y": 1000, "z": 0 },
+          "weight": 201.5,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        }
+      ]
+    },
+    {
+      "container_id": 2,
+      "destination_id": "DEST_B",
+      "total_weight": 600,
+      "items": [
+        {
+          "item_id": "P005",
+          "size_type": "small",
+          "dimensions": { "w": 500, "l": 500, "h": 500 },
+          "position":   { "x": 0,   "y": 0,   "z": 0 },
+          "weight": 200,
+          "is_rotated": false,
+          "destination_id": "DEST_A"
+        },
+        {
+          "item_id": "P006",
+          "size_type": "small",
+          "dimensions": { "w": 500, "l": 500, "h": 500 },
+          "position":   { "x": 2000, "y": 0, "z": 0 },
+          "weight": 200,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P007",
+          "size_type": "small",
+          "dimensions": { "w": 500, "l": 500, "h": 500 },
+          "position":   { "x": 0,   "y": 1000, "z": 0 },
+          "weight": 100,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        },
+        {
+          "item_id": "P007",
+          "size_type": "small",
+          "dimensions": { "w": 500, "l": 500, "h": 500 },
+          "position":   { "x": 0,   "y": 2000, "z": 0 },
+          "weight": 100,
+          "is_rotated": false,
+          "destination_id": "DEST_B"
+        }
+      ]
+    }
+  ]
+}
