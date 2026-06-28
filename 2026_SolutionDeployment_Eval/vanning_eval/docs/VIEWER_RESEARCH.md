@@ -32,8 +32,17 @@ JSON だけでは配置状態を確認しにくいため、以下を画面上で
 
 ## 現在の使い方
 
+公開サーバーが起動している場合:
+
+```text
+https://136.109.238.213.sslip.io/
+```
+
+ローカルで起動する場合:
+
 ```bash
 cd 2026_SolutionDeployment_Eval/vanning_eval
+python -m pip install -e ".[viewer]"
 python main.py
 ```
 

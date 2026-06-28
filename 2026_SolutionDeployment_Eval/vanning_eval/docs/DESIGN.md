@@ -12,6 +12,27 @@
 - 3D 可視化
 - scoreboard への投稿
 
+## 利用形態
+
+公開サーバー版:
+
+```text
+https://136.109.238.213.sslip.io/
+```
+
+公開サーバーが起動している場合は、ブラウザで URL を開くだけで使用できます。
+
+ローカル実行版:
+
+```bash
+cd 2026_SolutionDeployment_Eval/vanning_eval
+python -m pip install -e ".[viewer]"
+python main.py
+```
+
+ローカル実行時は標準で `http://localhost:8501` を使用します。
+`launch.bat` を使う場合は `http://localhost:8502` を使用します。
+
 ## フォルダ構成
 
 ```text

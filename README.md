@@ -72,11 +72,23 @@ adv_hard_v2cmaes/hard_12.json  ->  taiga/out_hard/layout_12.json
 python taiga/algorithm.py --input taiga/items_input.json --output taiga/layout_result.json --team-name taiga
 ```
 
-評価プラットフォームを起動する場合:
+## 評価プラットフォームの使い方
+
+すでに公開サーバーが起動している場合は、以下の URL をブラウザで開くだけで使用できます。
+
+```text
+https://136.109.238.213.sslip.io/
+```
+
+自分のPCでローカル実行する場合は、以下を実行します。
 
 ```bat
 cd 2026_SolutionDeployment_Eval\vanning_eval
 launch.bat
 ```
 
-起動後は `http://localhost:8502` を開きます。
+起動後は以下を開きます。
+
+```text
+http://localhost:8502
+```
