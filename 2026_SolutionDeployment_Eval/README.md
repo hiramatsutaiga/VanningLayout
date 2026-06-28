@@ -23,15 +23,38 @@
 
 ## ローカル起動
 
+Windows では、以下を実行するのが簡単です。
+初回起動時に必要な依存関係も自動でインストールされます。
+
+```bat
+cd 2026_SolutionDeployment_Eval\vanning_eval
+launch.bat
+```
+
+起動後、ブラウザで以下を開きます。
+
+```text
+http://localhost:8502
+```
+
+手動で起動する場合は、先に依存関係をインストールします。
+
 ```bash
 cd 2026_SolutionDeployment_Eval/vanning_eval
+python -m pip install -e ".[viewer]"
 python main.py
 ```
 
-Windows では以下でも起動できます。
+手動起動の場合の標準ポートは以下です。
 
-```bat
-launch.bat
+```text
+http://localhost:8501
+```
+
+ポートを指定する場合:
+
+```bash
+python main.py --port 8502
 ```
 
 ## 一括評価
@@ -49,6 +72,7 @@ vanning_eval/input/<名前>/
 
 ```bash
 cd 2026_SolutionDeployment_Eval/vanning_eval
+python -m pip install -e .
 python main.py --batch
 ```
 

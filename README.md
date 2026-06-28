@@ -74,7 +74,9 @@ python taiga/algorithm.py --input taiga/items_input.json --output taiga/layout_r
 
 評価プラットフォームを起動する場合:
 
-```bash
-cd 2026_SolutionDeployment_Eval/vanning_eval
-python main.py
+```bat
+cd 2026_SolutionDeployment_Eval\vanning_eval
+launch.bat
 ```
+
+起動後は `http://localhost:8502` を開きます。
