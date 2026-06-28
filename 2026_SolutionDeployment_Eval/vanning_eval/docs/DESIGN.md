@@ -12,17 +12,7 @@
 - 3D 可視化
 - scoreboard への投稿
 
-## 利用形態
-
-公開サーバー版:
-
-```text
-https://136.109.238.213.sslip.io/
-```
-
-公開サーバーが起動している場合は、ブラウザで URL を開くだけで使用できます。
-
-ローカル実行版:
+## ローカル実行
 
 ```bash
 cd 2026_SolutionDeployment_Eval/vanning_eval

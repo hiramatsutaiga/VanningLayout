@@ -74,12 +74,6 @@ python taiga/algorithm.py --input taiga/items_input.json --output taiga/layout_r
 
 ## 評価プラットフォームの使い方
 
-すでに公開サーバーが起動している場合は、以下の URL をブラウザで開くだけで使用できます。
-
-```text
-https://136.109.238.213.sslip.io/
-```
-
 自分のPCでローカル実行する場合は、以下を実行します。
 
 ```bat
